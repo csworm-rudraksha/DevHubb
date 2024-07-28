@@ -1,0 +1,46 @@
+.navbar {
+    width: 100%;
+    display: flex;
+    /* justify-content: space-between; */
+    /* align-items: center; */
+    padding: 0 20px; /* Add padding for spacing */
+    height: 55px;
+  }
+  
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+  }
+  
+  .btn1, #userbutton {
+    background-color: transparent;
+    border: none;
+    /* padding: 0 10px; Adjust padding for spacingx */
+    right: 0px;
+      width: fit-content;
+      padding: 0;
+      margin-left: 10px;
+  }
+  
+  .user {
+    padding: 8px;
+    border-radius: 50%;
+    background-color: rgb(193, 191, 191);
+    width: fit-content; /* Adjust the size as needed */
+    height: fit-content; /* Adjust the size as needed */
+    display: none;
+  }
+  
+  @media (max-width: 768px) {
+    .user {
+      display: flex;
+    }
+    #userbutton {
+      background-color: transparent;
+      right: 0px;
+      width: fit-content;
+      padding: 0;
+      margin-left: 10px;
+    }
+  }
+  

@@ -1,0 +1,86 @@
+
+#user {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+#avatar {
+    width: 100px;
+}
+
+#name {
+    font-size: 1.2em;
+    font-weight: bold;
+    width: fit-content;
+    height: fit-content;
+    margin: 0;
+}
+
+#userid {
+    color: rgb(8, 172, 237);
+    height: fit-content;
+    width: fit-content;
+    height: fit-content;
+}
+
+
+.update {
+    background-color: aquamarine;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 0;
+}
+
+.update:hover {
+    background-color: rgb(94, 186, 155);
+}
+
+#info {
+    padding: 2px;
+    height: fit-content;
+}
+
+#lc {
+    height: 40px;
+}
+
+#leetcode {
+    width: fit-content;
+    height: fit-content;
+    margin: 0;
+    font-weight: 700;
+}
+
+#lcname {
+    width: fit-content;
+    height: fit-content;
+    margin: 0;
+    font-size: small;
+}
+
+.about {
+    font-size: small;
+}
+
+
+@media (max-width: 1000px) {
+
+    #con {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    #name {
+        margin-top: 0;
+        margin-left: 10px;
+    }
+
+    #userid {
+        padding-left: 20px;
+    }
+    #avatar{
+        width: 70px;
+    }
+}

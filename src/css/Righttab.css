@@ -1,0 +1,84 @@
+/* Righttab.css */
+
+::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: transparent;
+    margin: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: gray;
+    border-radius: 50px;
+  }
+  
+  .card1,
+  .card2,
+  .card3,
+  .card4,
+  .card5,
+  .card6,
+  .card7 {
+    background-color: whitesmoke;
+    border-radius: 15px;
+    padding: 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: 100%;
+  }
+  
+  .ques,
+  .days {
+    font-weight: 700;
+  }
+  
+  .center {
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    width: 70%;
+    height: 70%;
+    background-color: white;
+    border-radius: 50%;
+  }
+  
+  #levels {
+    font-size: 18px;
+    font-weight: 700;
+    align-content: center;
+  }
+  
+  .pie-chart {
+    height: 100px;
+    width: 100px;
+  }
+  
+  .carousel-container {
+    width: 100%;
+  }
+  
+  .badge img {
+    max-width: 100px;
+    height: auto;
+  }
+  
+  /* Media query for responsiveness */
+  @media (max-width: 768px) {
+    .card1,
+    .card2,
+    .card3,
+    .card4,
+    .card5,
+    .card6,
+    .card7 {
+      width: 100%;
+      margin-bottom: 15px;
+    }
+  
+    .pie-chart {
+      height: 20px;
+      width: 20px;
+    }
+  }
+  

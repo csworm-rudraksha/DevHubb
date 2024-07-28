@@ -1,0 +1,45 @@
+/* App css */
+#main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+
+}
+
+#left {
+  /* height: 85vh; */
+  border-radius: 15px;
+  background-color: whitesmoke;
+  overflow-y: scroll;
+  display: flex;
+  width: 400px;
+}
+
+#right {
+  background-color: rgb(231, 230, 230);
+  height: 85vh;
+  overflow-y: scroll;
+  border-radius: 15px;
+  padding: 0px;
+  display: flex;
+  flex: 1;
+}
+
+/* right tab */
+@media (max-width: 1300px) {
+
+  #left{
+    display: none;
+  }
+  #right {
+      width: 100%;
+      height: auto;
+  }
+
+  #main {
+      flex-direction: column;
+  }
+}
+/* Righttab.css */
+
+
