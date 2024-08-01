@@ -144,10 +144,10 @@ export default function Lefttab() {
           <i className="bi bi-envelope"></i> {userData.gmail}
         </div>
         <div id="info">
-          <i className="bi bi-linkedin"></i> <a href={userData.linkedin}> {userData.linkedin}</a>
+          <i className="bi bi-linkedin"></i> <a href={userData.linkedin}> LinkedIn</a>
         </div>
         <div id="info">
-          <i className="bi bi-twitter"></i> <a href={userData.twitter}> {userData.twitter}</a>
+          <i className="bi bi-twitter"></i> <a href={userData.twitter}>Twitter</a>
         </div>
       </div>
       <hr />
