@@ -40,6 +40,13 @@
 #info {
     padding: 2px;
     height: fit-content;
+    
+}
+a{
+    color: black;
+}
+a:hover{
+    color: rgb(8, 172, 237);
 }
 
 #lc {

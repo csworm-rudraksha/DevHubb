@@ -4,10 +4,10 @@ import "./App.css";
 import Navbar from "./components/Navbar";
 import Lefttab from "./components/Lefttab";
 import Login from "./components/Login";
-import Home from "./components/Home"
+// import Home from "./components/Home"
 
 export default function App() {
-  // const URL = "https://alfa-leetcode-api.onrender.com/";
+  const URL = "https://alfa-leetcode-api.onrender.com/";
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   useEffect(() => {
@@ -39,7 +39,9 @@ export default function App() {
       ) : (
         <Login setIsLoggedIn={setIsLoggedIn} />
       )}
-     
+     <div className="footer">
+      <p className="text-center py-1">Made by Rudraksha Kushwaha</p>
+     </div>
     </div>
   );
 }

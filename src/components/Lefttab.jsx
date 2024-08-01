@@ -1,8 +1,33 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import profile from "./profile.png";
 import "../css/Lefttab.css";
+import { DataContext } from "./DataContext";
 
 export default function Lefttab() {
+  const URL = 'https://alfa-leetcode-api.onrender.com/';
+  const [avatar, setAvatar] = useState(profile);
+  const {
+    solvedProblems,
+    easyProb,
+    mediumProb,
+    hardProb,
+    rank,
+    contRank,
+    contGlobal,
+    contAttended,
+    contTotal,
+    badges,
+    setSolvedProb,
+    seteasyProb,
+    setmediumProb,
+    sethardProb,
+    setRank,
+    setcontRate,
+    setcontGlobal,
+    setcontAttended,
+    setcontTotal,
+    setBadges,
+  } = useContext(DataContext);
   const [userData, setUserData] = useState({
     avatar: profile,
     name: "N/A",
@@ -15,6 +40,7 @@ export default function Lefttab() {
     twitter: "N/A",
     location: "N/A",
   });
+  const [user, setUser] = useState(userData.leetcodeUsername);
 
   useEffect(() => {
     const loginData = JSON.parse(localStorage.getItem("loginData"));
@@ -28,23 +54,21 @@ export default function Lefttab() {
           githubUsername: signupData.github,
           bio: signupData.bio,
           gmail: signupData.email,
-          institute: signupData.institute || "N/A", // Assuming institute is not part of the initial signup
+          institute: signupData.institute || "N/A",
           linkedin: signupData.linkedin || "N/A",
           twitter: signupData.twitter || "N/A",
           location: signupData.location || "N/A",
         }));
+        setUser(signupData.leetcode);
       }
     }
   }, []);
 
-  const [avatar, setAvatar] = useState(profile);
-  const URL = 'https://alfa-leetcode-api.onrender.com/';
-
   useEffect(() => {
     const setAvatarUrl = async () => {
-      if (userData.leetcodeUsername !== "N/A") {
+      if (user !== "N/A") {
         try {
-          const response = await fetch(URL + userData.leetcodeUsername);
+          const response = await fetch(URL + user);
           const data = await response.json();
           setAvatar(data.avatar || profile);
         } catch (error) {
@@ -53,8 +77,34 @@ export default function Lefttab() {
       }
     };
     setAvatarUrl();
-  }, [userData.leetcodeUsername]);
+  }, [user]);
+
+  const update = async () => {
+    try {
+      const response1 = await fetch(URL + "userProfile/" + user);
+      const data1 = await response1.json();
+      const response2 = await fetch(URL + user + "/contest");
+      const data2 = await response2.json();
+      const response3 = await fetch(URL + user + "/badges");
+      const data3 = await response3.json();
+      seteasyProb(data1.easySolved);
+      setmediumProb(data1.mediumSolved);
+      sethardProb(data1.hardSolved);
+      setSolvedProb(data1.totalSolved);
+      setRank(data1.ranking);
+      setcontGlobal(data2.contestGlobalRanking);
+      setcontRate(data2.contestRating);
+      setcontAttended(data2.contestAttend);
+      setcontTotal(data2.contestTopPercentage);
+      setBadges(data3.badges || []);
+    } catch (error) {
+      console.error("Error fetching data", error);
+    }
+  };
   
+  const mod=()=>{
+    
+  }
 
   return (
     <div className="container my-4">
@@ -67,13 +117,18 @@ export default function Lefttab() {
             <p id="name">{userData.name}</p>
           </div>
           <div className="row">
-            <p id="userid">@{userData.name}</p>
+            <p id="userid">@{userData.leetcodeUsername}</p>
           </div>
         </div>
       </div>
       <br />
       <div className="row">
-      <button type="button" className="update">Update Profile</button>
+        <button type="button" className="update" onClick={mod}>
+          Update Profile
+        </button>
+      </div>
+      <div className="mod">
+        {/* hello */}
       </div>
       <br />
       <div className="about">{userData.bio}</div>
@@ -89,10 +144,10 @@ export default function Lefttab() {
           <i className="bi bi-envelope"></i> {userData.gmail}
         </div>
         <div id="info">
-          <i className="bi bi-linkedin"></i> {userData.linkedin}
+          <i className="bi bi-linkedin"></i> <a href={userData.linkedin}> {userData.linkedin}</a>
         </div>
         <div id="info">
-          <i className="bi bi-twitter"></i> {userData.twitter}
+          <i className="bi bi-twitter"></i> <a href={userData.twitter}> {userData.twitter}</a>
         </div>
       </div>
       <hr />
@@ -130,7 +185,9 @@ export default function Lefttab() {
                     </div>
                   </div>
                   <div className="col-2">
-                    <button><i class="bi bi-arrow-clockwise"></i></button>
+                    <button onClick={update}>
+                      <i className="bi bi-arrow-clockwise"></i>
+                    </button>
                   </div>
                 </div>
                 {/* <hr />
@@ -147,14 +204,13 @@ export default function Lefttab() {
                     </div>
                   </div>
                   <div className="col-2">
-                    <button><i class="bi bi-arrow-clockwise"></i></button>
+                    <button><i className="bi bi-arrow-clockwise"></i></button>
                   </div>
                 </div> */}
               </div>
             </div>
           </div>
         </div>
-        <br />
       </div>
     </div>
   );

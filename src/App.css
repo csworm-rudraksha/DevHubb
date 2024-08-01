@@ -3,6 +3,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+  overflow-y:hidden;
 
 }
 
@@ -28,18 +29,36 @@
 /* right tab */
 @media (max-width: 1300px) {
 
-  #left{
+  #left {
     display: none;
   }
+
   #right {
-      width: 100%;
-      height: auto;
+    width: 100%;
+    height: auto;
   }
 
   #main {
-      flex-direction: column;
+    flex-direction: column;
   }
 }
-/* Righttab.css */
+.footer {
+  background-color: #f8f9fa; /* Light gray background */
+  color: #343a40; /* Dark text color for contrast */
+  padding: 5px; /* Add some padding */
+  position: relative; /* Ensure it stays at the bottom */
+  bottom: 0;
+  width: 100%; /* Center align text */
+  box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+  font-size: 14px; /* Adjust font size */
+  height: fit-content;
+}
+
+.footer p {
+  margin: 0; /* Remove default margins */
+
+}
+
+
 
 

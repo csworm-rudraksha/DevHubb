@@ -44,10 +44,12 @@ export default function Navbar({ handleLogout }) {
         aria-labelledby="offcanvasWithBothOptionsLabel"
       >
         <div className="offcanvas-header">
-          <h5 className="offcanvas-title" id="offcanvasWithBothOptionsLabel">
-            Menu
+          <h5
+            className="offcanvas-title text-center"
+            id="offcanvasWithBothOptionsLabel"
+          >
+            User Details:
           </h5>
-          <hr />
           <button
             type="button"
             className="btn-close"

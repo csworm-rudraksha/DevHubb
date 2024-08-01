@@ -1,96 +1,118 @@
 .container.main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f8f9fa;
-  }
-  
-  .card {
-    width: 22rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    overflow: hidden;
-  }
-  
-  .card-header {
-    background-color: #007bff;
-    color: white;
-    padding: 1rem;
-    font-size: 1.25rem;
-    text-align: center;
-    position: relative;
-  }
-  
-  .back-button {
-    position: absolute;
-    top: 50%;
-    left: 10px;
-    transform: translateY(-50%);
-    color: white;
-    background: none;
-    border: none;
-    font-size: 1rem;
-    cursor: pointer;
-  }
-  
-  .back-button:hover {
-    background-color: transparent;
-  }
-  
-  .card-body {
-    padding: 1.5rem;
-  }
-  
-  .card-title {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-  }
-  
-  .card-text label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-weight: bold;
-  }
-  
-  .card-text input {
-    width: 100%;
-    padding: 0.5rem;
-    margin-bottom: 1rem;
-    border: 1px solid #ced4da;
-    border-radius: 4px;
-  }
-  
-  .btn-secondary, .btn-primary {
-    width: 100%;
-    padding: 0.75rem;
-    font-size: 1rem;
-    background-color: #6c757d;
-    border: none;
-    color: white;
-    border-radius: 4px;
-    cursor: pointer;
-    text-align: center;
-  }
-  
-  .btn-secondary:hover, .btn-primary:hover {
-    background-color: #5a6268;
-  }
-  
-  .btn-link {
-    display: block;
-    width: 100%;
-    margin-top: 10px;
-    text-align: center;
-    color: #007bff;
-    text-decoration: none;
-    font-size: 0.9rem;
-    cursor: pointer;
-    background: none;
-    border: none;
-  }
-  
-  .btn-link:hover {
-    text-decoration: underline;
-  }
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f8f9fa;
+}
+
+.card {
+  width: 22rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.card-header {
+  background-color: #007bff;
+  color: white;
+  padding: 1rem;
+  font-size: 1.25rem;
+  /* text-align: center; */
+  position: relative;
+}
+
+.card-header {
+  background-color: #007bff;
+  color: white;
+  padding: 1rem;
+  font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+  /* Center the text and button vertically */
+  justify-content: center;
+  /* Center the text horizontally */
+  position: relative;
+}
+
+.card-header .back-button {
+  position: absolute;
+  /* Remove from normal flow */
+  left: 1rem;
+  /* Position from the left edge */
+  top: 50%;
+  /* Center vertically */
+  transform: translateY(-50%);
+  /* Adjust vertical alignment */
+  color: white;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+
+
+
+.card-body {
+  padding: 1.5rem;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.card-text label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.card-text input {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+}
+
+.btn-secondary,
+.btn-primary {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  background-color: #6c757d;
+  border: none;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.btn-secondary:hover,
+.btn-primary:hover {
+  background-color: #5a6268;
+}
+
+.btn-link {
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+  text-align: center;
+  color: #007bff;
+  text-decoration: none;
+  font-size: 0.9rem;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.btn-link:hover {
+  text-decoration: underline;
+}
+
+#leetcode,
+#name {
+  width: 100%;
+  font-weight: normal;
+}
