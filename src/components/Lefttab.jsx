@@ -103,7 +103,7 @@ export default function Lefttab() {
   };
   
   const mod=()=>{
-    
+    console.log("hello")
   }
 
   return (
@@ -123,7 +123,7 @@ export default function Lefttab() {
       </div>
       <br />
       <div className="row">
-        <button type="button" className="update" onClick={mod}>
+        <button type="button" className="update">
           Update Profile
         </button>
       </div>
@@ -172,7 +172,7 @@ export default function Lefttab() {
               data-bs-parent="#accordionExample"
             >
               <div className="accordion-body">
-                <div className="row">
+                <div className="row" onClick={mod}>
                   <div className="col-2">
                     <img id="lc" src={avatar} alt="LeetCode" />
                   </div>

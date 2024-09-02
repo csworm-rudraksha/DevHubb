@@ -29,7 +29,7 @@ export default function App() {
           <Navbar handleLogout={handleLogout} />
           <div className="row my-4 mx-5" id="main">
             <div className="col-4" id="left">
-              <Lefttab url={URL} />
+              <Lefttab/>
             </div>
             <div className="col-8 px-0 mx-0" id="right">
               <Righttab />

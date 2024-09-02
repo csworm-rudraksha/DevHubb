@@ -5,7 +5,7 @@ import "../css/Righttab.css";
 import { DataContext, DataProvider } from "./DataContext";
 
 // URL commented out for local testing
-// const URL = 'https://alfa-leetcode-api.onrender.com/';
+const URL = 'https://alfa-leetcode-api.onrender.com/';
 
 export default function Righttab() {
   const {
