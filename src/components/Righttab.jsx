@@ -58,6 +58,7 @@ export default function Righttab() {
     borderRadius: "50%",
     position: "relative",
   };
+  const formattedContRank = parseFloat(contRank).toFixed(2);
 
   // Fetch first row
   // useEffect(() => {
@@ -216,7 +217,7 @@ export default function Righttab() {
         <div className="col-lg-5 col-md-6 col-sm-12 mb-1">
           <div className="card2 text-center py-5 px-2 mx-1">
             <h4>Contest Rating</h4>
-            <h1 className="days">{contRank}</h1>
+            <h1 className="days">{formattedContRank}</h1>
           </div>
         </div>
       </div>

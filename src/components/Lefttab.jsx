@@ -190,7 +190,7 @@ export default function Lefttab() {
                     </button>
                   </div>
                 </div>
-                {/* <hr />
+                <hr />
                 <div className="row">
                   <div className="col-2">
                     <img id="lc" src={avatar} alt="Github" />
@@ -206,7 +206,7 @@ export default function Lefttab() {
                   <div className="col-2">
                     <button><i className="bi bi-arrow-clockwise"></i></button>
                   </div>
-                </div> */}
+                </div>
               </div>
             </div>
           </div>
